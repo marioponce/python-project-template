@@ -30,7 +30,7 @@ jobs:
 
       - name: Lint with Ruff
         run: |
-          ruff check .
+          ruff check src test
           ruff format --check .
 
       - name: Run tests
