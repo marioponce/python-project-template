@@ -39,7 +39,7 @@ Failing to update these fields may result in incorrect metadata or citation info
 
 ---
 
-## 📦 Installation
+## Installation
 
 ### 1. Modify environment configuration
 
@@ -99,6 +99,22 @@ Format code:
 ruff format .
 ```
 ---
+### Pre-commit Hooks (Recommended)
+
+To automatically run linting and formatting before each commit:
+
+```bash
+pip install -e .[dev]
+pre-commit install
+```
+
+Now, Ruff will run automatically before every commit.
+
+To run manually on all files:
+```bash
+pre-commit run --all-files
+```
+---
 ### Build Documentation (Sphinx)
 
 From the docs/ directory:
@@ -129,3 +145,29 @@ project_name/
 ### License
 
 MIT License.
+
+---
+
+### Versioning Strategy
+
+This project follows a simplified Semantic Versioning scheme:
+
+MAJOR.MINOR.PATCH
+
+- **PATCH** (0.1.1 → 0.1.2):  
+  Bug fixes, small refactors, documentation updates.  
+  No breaking changes.
+
+- **MINOR** (0.1.0 → 0.2.0):  
+  New functionality added in a backward-compatible way.
+
+- **MAJOR** (0.x.x → 1.0.0 or 1.0.0 → 2.0.0):  
+  Breaking changes that modify public APIs or expected behavior.
+
+#### Practical Rule
+
+If someone updates the package and their existing code continues to work → use PATCH or MINOR.  
+If updating the package breaks existing code → use MAJOR.
+
+For early-stage research projects, versions typically remain in the 0.x.x range.  
+A stable release used in publications or reports should be marked as 1.0.0.
