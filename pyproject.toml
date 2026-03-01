@@ -48,6 +48,7 @@ line-length = 88
 
 [tool.ruff]
 line-length = 88
+exclude = ["notebooks"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
