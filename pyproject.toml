@@ -48,7 +48,13 @@ line-length = 88
 
 [tool.ruff]
 line-length = 88
-exclude = ["notebooks"]
+target-version = "py311"
+exclude = [
+  "notebooks",
+  "build",
+  "dist",
+  ".venv",
+]
 
 [tool.ruff.lint]
 select = ["E", "F", "I"]
